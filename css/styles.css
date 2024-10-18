@@ -1,0 +1,617 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f2f5; */
+    background-color: #f8f7f0!important;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1240px;
+    background-color: #f8f7f0;
+    /* Updated background color */
+    /* padding: 10px; */
+    border-radius: 8px;
+}
+
+/* Left Column */
+.left-column {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+
+}
+
+.sticky {
+    position: sticky;
+    top: 30px;
+    background-color: #ffffff;
+    /* padding: 20px;
+    border-radius: 8px; */
+    /* border: 1px solid #ddd; */
+    /* Added border */
+}
+
+/* Center Column */
+.center-column {
+    width: 50%;
+    padding: 10px;
+}
+
+.content-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    /* Added border */
+}
+
+/* Right Column */
+.right-column {
+    width: 25%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+}
+
+
+/* Start JUST A SMIRK Section  */
+
+.four-columns {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.smirk-column {
+    flex: 1;
+    height: 150px;
+    /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Text color */
+}
+
+.column-content {
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 10px 5px 10px 5px;
+    border-radius: 8px;
+    margin-top: 96px;
+}
+
+/* Adding background images to each smirk column */
+.smirk-column:nth-child(1) {
+    background-image: url('../assets/images/smirk1.jpg');
+}
+
+.smirk-column:nth-child(2) {
+    background-image: url('../assets/images/smirk2.jpg');
+}
+
+.smirk-column:nth-child(3) {
+    background-image: url('../assets/images/smirk3.jpg');
+}
+
+.smirk-column:nth-child(4) {
+    background-image: url('../assets/images/smirk4.jpg');
+}
+
+
+/* End JUST A SMIRK Section  */
+
+
+/* Start Post   Section  */
+
+.create-post-section {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.post-options {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.option-btn {
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.option-btn i {
+    margin-right: 5px;
+}
+
+.option-btn:hover {
+    background-color: #e0e3e6;
+}
+
+/* Popup Box */
+.popup-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+} */
+
+.popup-content {
+    position: relative;
+    /* Add this line to position the close button relative to the content */
+    background-color: #ffffff;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+#popup-file-input,
+#popup-textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.post-btn {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.post-btn:hover {
+    background-color: #324b7f;
+}
+
+.upload-btn {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.upload-btn:hover {
+    background-color: #324b7f;
+}
+
+.close-btn {
+    position: absolute;
+    /* Change this to absolute */
+    top: 15px;
+    /* Adjust as necessary */
+    right: 15px;
+    /* Adjust as necessary */
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+
+/* End Post   Section  */
+
+
+
+/* Start Quote Section  */
+
+.quote-section {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.quote-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.quote-profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.quote-info {
+    flex-grow: 1;
+}
+
+.quote-username {
+    font-weight: bold;
+}
+
+.quote-time {
+    font-size: 0.85em;
+    color: #888;
+    margin-left: 10px;
+}
+
+.quote-three-dots {
+    cursor: pointer;
+}
+
+.quote-options {
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    right: 0;
+    display: none;
+}
+
+.quote-options ul {
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+.quote-options li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.quote-options li:hover {
+    background: #f0f2f5;
+}
+
+.quote-content {
+    margin: 10px 0;
+}
+
+.quote-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.quote-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.quote-like-btn,
+.quote-comment-btn,
+.quote-share-btn {
+    border: none;
+    background-color: transparent;
+    color: #3b5998;
+    cursor: pointer;
+}
+
+.quote-comments-section {
+    margin-top: 15px;
+}
+
+.quote-comment-input {
+    display: flex;
+    align-items: center;
+}
+
+.quote-comment-field {
+    width: 100%;
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quote-comments {
+    margin-top: 10px;
+}
+
+.quote-comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quote-comment-info {
+    margin-left: 10px;
+}
+
+.quote-comment-username {
+    font-weight: bold;
+}
+
+.quote-comment-text {
+    margin: 5px 0;
+}
+
+.quote-comment-actions {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+/* End Quote Section  */
+
+
+
+/* Start Left Column  */
+
+/* .left-column {
+    width: 250px;
+    
+    background-color: #f8f9fa;
+    
+    padding: 15px;
+    border-right: 1px solid #ddd;
+   
+    height: 100vh;
+   
+    position: sticky;
+   
+    top: 0;
+    
+} */
+
+/* .sticky {
+    position: relative;
+   
+} */
+
+.left-column h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.left-column p {
+    font-size: 1em;
+    color: #333;
+    /* Text color */
+    margin-bottom: 15px;
+    /* Space below the artist's name */
+}
+
+iframe {
+    border-radius: 8px;
+    /* Rounded corners for the iframe */
+}
+
+
+/* End Left Column  */
+
+/* Start Right  Column  */
+
+.right-column h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    /* Space below the main heading */
+    text-align: center;
+    /* Center the heading */
+}
+
+.row {
+    display: flex;
+    /* Flexbox for horizontal alignment */
+    align-items: center;
+    /* Center items vertically */
+    margin-bottom: 20px;
+    /* Space between rows */
+}
+
+.col-30 {
+    flex: 0 0 30%;
+    /* Set this column width to 30% */
+}
+
+.col-70 {
+    flex: 0 0 70%;
+    /* Set this column width to 70% */
+}
+
+.row-image {
+    width: 71px;
+    height: 71px;
+    /* Image height */
+    border-radius: 5px;
+    /* Rounded corners for the image */
+}
+
+
+/* End Right  Column  */
+
+
+.artist-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* margin-top: 10px; */
+    /* background-color: #33333363; */
+}
+
+
+
+/* Combine heading styles */
+h2 {
+    font-family: 'Special Elite', monospace;
+    color: #333; /* Set text color */
+    line-height: 1.5; /* Set line height */
+    margin-bottom: 20px; /* Add spacing below headings */
+    text-align: center; /* Center-align all headings */
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat as the font for the body */
+    color: #333; /* Text color */
+    font-size: 16px;
+    
+    
+}
+
+
+.row-title{
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5px;
+  font-size: 16px;
+}
+
+
+.row-description{
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+  font-size: 14px;
+}
+
+.quote-comment-text{
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat as the font for the body */
+    color: #000000; /* Text color */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+.row-price {
+    color: #FF5733; /* Change this color code to your preferred color */
+    font-weight: bold; /* Optional: make the price bold */
+    font-size: 1em; /* Optional: adjust the font size */
+    margin-top: 5px; /* Add some space above the price */
+}
+
+
+.read-more-button{
+    border: none;
+    color: #7e7e7e;
+}
+
+.read-more-button:hover{
+    border: none;
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.preview{
+    font-family: 'Montserrat', sans-serif; /* Set Montserrat as the font for the body */
+    color: #333; /* Text color */
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
+
+
+
+
+
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.box {
+    margin: 10px;
+    width: 200px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+}
+.box img {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}

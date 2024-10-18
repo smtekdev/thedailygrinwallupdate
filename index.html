@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- monts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Left Column (Sticky) -->
+        <div class="left-column">
+            <div class="sticky">
+                <h2>Playlist</h2>
+
+
+                <!-- Spotify Playlist Embed -->
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO4cHMyv?utm_source=generator&theme=0"
+                    width="100%" height="380" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+
+
+
+
+
+
+                <div class="artist-list">
+                    <h2>Favorite Spotify Artists</h2>
+
+
+                    <!-- Artist 2 -->
+                    <div class="artist-item">
+                        <iframe src="https://open.spotify.com/embed/artist/3fMbdgg4jU18AjLCKBhRSm" width="280"
+                            height="85" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+
+                    <!-- Artist 3 -->
+                    <div class="artist-item">
+                        <iframe src="https://open.spotify.com/embed/artist/1Xyo4u8uXC1ZmMpatF05PJ" width="280"
+                            height="85" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+
+
+
+                    <!-- Artist 5 -->
+                    <div class="artist-item">
+                        <iframe src="https://open.spotify.com/embed/artist/66CXWjxzNUsdJxJ2JdwvnR" width="280"
+                            height="85" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+
+                    <!-- Artist 6 -->
+                    <div class="artist-item">
+                        <iframe src="https://open.spotify.com/embed/artist/1uNFoZAHBGtllmzznpCI3s" width="280"
+                            height="85" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <!--===========d-dlt  -->
+            </div>
+        </div>
+
+
+        <!-- End Left Column -->
+
+
+        <!-- Center Column (Non-sticky) -->
+        <div class="center-column">
+
+            <!-- Start JUST A SMIRK Section -->
+
+            <div class="content-section">
+                <div class="four-columns">
+
+
+                    <div class="smirk-column">
+                        <div class="column-content">
+                            <p>
+                                Life’s Little Lessons in
+                                Quotes
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="smirk-column">
+                        <div class="column-content">
+                            <p>
+                                Notes & Playlists: My Musical Journey
+
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="smirk-column">
+                        <div class="column-content">
+                            <p>
+                                Turning the Grind into a Grin: Jack’s Intro
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="smirk-column">
+                        <div class="column-content">
+                            <p>
+                                Cookies vs. Pickups: Wants or Needs?
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- End JUST A SMIRK Section -->
+
+            <!-- Start Post Section -->
+            <div class="content-section">
+                <div class="create-post-section">
+                    <div class="post-header">
+                        <img src="assets/images/postimg.jpg" alt="Profile" class="profile-image">
+                        <input type="text" placeholder="What's on your mind?" class="post-input">
+                    </div>
+                    <div class="post-options">
+                        <button class="option-btn" onclick="openPopup('photo')">
+                            <i class="fas fa-camera"></i> Photo
+                        </button>
+                        <button class="option-btn" onclick="openPopup('video')">
+                            <i class="fas fa-video"></i> Video
+                        </button>
+                        <button class="option-btn" onclick="openPopup('event')">
+                            <i class="fas fa-calendar-alt"></i> Event
+                        </button>
+                        <button class="option-btn" onclick="openPopup('other')">
+                            <i class="fas fa-ellipsis-h"></i> Other
+                        </button>
+                    </div>
+                    <!-- Post Button -->
+                    <button class="post-btn" onclick="submitPost()">Post</button>
+                </div>
+
+
+                <!-- Popup Box (hidden by default) -->
+                <div id="popup" class="popup-box" style="display: none;">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup()">&times;</span>
+                        <h3 id="popup-title"></h3>
+                        <input type="file" id="popup-file-input" style="display: none;">
+                        <textarea id="popup-textarea" placeholder="Enter details..."></textarea>
+                        <!-- Upload Button inside Popup -->
+                        <button class="upload-btn" onclick="uploadMedia()">Upload</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End Post Section -->
+
+
+            <!-- Start Quote Section -->
+            <div class="content-section">
+
+                <!-- First post start -->
+
+                <div class="quote-section">
+                    <div class="quote-header">
+                        <img src="assets/images/showpost.jpg" alt="Profile" class="quote-profile-image">
+                        <div class="quote-info">
+                            <span class="quote-username">Frances Guerrero</span>
+                            <span class="quote-time">2 hours ago</span>
+                            <!-- <div class="quote-three-dots" onclick="toggleQuoteOptions(this)">&#x2026;</div>
+                            <div class="quote-options" style="display: none;">
+                                <ul>
+                                    <li>Save Post</li>
+                                    <li>Unfollow Frances Guerrero</li>
+                                    <li onclick="toggleQuoteOptions(this.parentNode.parentNode)">Hide Post</li>
+                                    <li>Block</li>
+                                    <li>Report Post</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="quote-content">
+                        <p>
+                            “I was young and foolish then; now I am old and foolisher.”
+                        </p>
+                        <img src="assets/images/showpostimg.jpg" alt="Post Image" class="quote-image">
+                    </div>
+
+                    <div class="quote-actions">
+                        <button class="quote-like-btn"><i class="icon-like"></i> Like</button>
+                        <button class="quote-comment-btn"><i class="icon-comment"></i> Comment</button>
+                        <button class="quote-share-btn">Share</button>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="quote-comments-section">
+                        <div class="quote-comment-input">
+                            <img src="assets/images/postimg.jpg" alt="Profile" class="quote-profile-image">
+                            <input type="text" placeholder="Write a comment..." class="quote-comment-field">
+                        </div>
+
+                        <div class="quote-comments">
+                            <div class="quote-comment">
+                                <img src="assets/images/showcomment.jpg" alt="Profile" class="quote-profile-image">
+                                <div class="quote-comment-info">
+                                    <span class="quote-comment-username">John Doe</span>
+                                    <p class="quote-comment-text">It captures the relatable experience of realizing that
+                                        we often repeat the same mistakes, no matter how much we grow.</p>
+                                    <div class="quote-comment-actions">
+                                        <span class="quote-like">Like</span>
+                                        <span class="quote-reply">Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quote-comment">
+                                <img src="assets/images/04-NoooYKt_.jpg" alt="Profile" class="quote-profile-image">
+                                <div class="quote-comment-info">
+                                    <span class="quote-comment-username">Dennis Barrett</span>
+                                    <p class="quote-comment-text">This quote humorously reflects the irony of aging,
+                                        suggesting that wisdom doesn’t always come with age</p>
+                                    <div class="quote-comment-actions">
+                                        <span class="quote-like">Like</span>
+                                        <span class="quote-reply">Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional comments can be added here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- First post ends -->
+
+
+
+
+
+                <!-- Second Post Starts -->
+
+                <div class="quote-section">
+                    <div class="quote-header">
+
+
+
+                        <img src="assets/images/articlepro.jpeg" alt="Profile" class="quote-profile-image">
+
+
+
+                        <div class="quote-info">
+
+
+                            <span class="quote-username">Sarah Thompson</span>
+                            <span class="quote-time">5 hours ago</span>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="aricle-post">
+
+                        <div class="article-content">
+                            <h5>Embracing a Happy Life</h5>
+                            <p class="preview">
+                                Happiness is often considered the ultimate goal in life. But what does it truly mean to
+                                live a happy life?
+                                It's a question that many ponder, and the answers can vary significantly from person to
+                                person.
+                                At its core, a happy life is about finding joy in the little things and cultivating a
+                                positive mindset.
+                                One key aspect of happiness is gratitude. Taking time each day to reflect on what you
+                                are grateful for can shift your focus from what you lack to what you have.
+                                This simple practice can create a profound sense of fulfillment and contentment.
+                                <span class="full-article" style="display: none;">
+                                    Another important factor is nurturing relationships. Surrounding yourself with
+                                    supportive friends and family can enhance your happiness.
+                                    Strong connections with others provide love, support, and a sense of belonging, all
+                                    of which contribute to a happier life.
+                                    Additionally, pursuing passions and hobbies can bring immense joy. Engaging in
+                                    activities that excite and inspire you allows for a sense of accomplishment and
+                                    fulfillment.
+                                    Whether it’s painting, hiking, or learning a new skill, dedicating time to your
+                                    interests enriches your life experience.
+                                    Lastly, it's essential to practice self-care. Taking care of your physical, mental,
+                                    and emotional health lays the foundation for a happier life.
+                                    This includes regular exercise, a balanced diet, sufficient sleep, and taking time
+                                    to relax and recharge.
+                                </span>
+                            </p>
+
+                            <button class="read-more-button" onclick="toggleArticle()"> Read More</button>
+
+                        </div>
+
+
+
+
+
+                        <script>
+                            function toggleArticle() {
+                                const fullArticle = document.querySelector('.full-article');
+                                const button = document.querySelector('.read-more-button');
+
+                                if (fullArticle.style.display === 'none' || fullArticle.style.display === '') {
+                                    fullArticle.style.display = 'inline'; // Show the full article
+                                    button.textContent = 'Read Less'; // Change button text to 'Read Less'
+                                } else {
+                                    fullArticle.style.display = 'none'; // Hide the full article
+                                    button.textContent = 'Read More'; // Change button text back to 'Read More'
+                                }
+                            }
+                        </script>
+
+
+
+                    </div>
+                    <div class="quote-content">
+
+                        <img src="assets/images/articlephoto.jpg" alt="Post Image" class="quote-image">
+                    </div>
+
+                    <div class="quote-actions">
+                        <button class="quote-like-btn"><i class="icon-like"></i> Like</button>
+                        <button class="quote-comment-btn"><i class="icon-comment"></i> Comment</button>
+                        <button class="quote-share-btn">Share</button>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="quote-comments-section">
+                        <div class="quote-comment-input">
+                            <img src="assets/images/postimg.jpg" alt="Profile" class="quote-profile-image">
+                            <input type="text" placeholder="Write a comment..." class="quote-comment-field">
+                        </div>
+
+                        <div class="quote-comments">
+                            <div class="quote-comment">
+                                <img src="assets/images/com-1.jpg" alt="Profile" class="quote-profile-image">
+                                <div class="quote-comment-info">
+                                    <span class="quote-comment-username">David Reyes</span>
+                                    <p class="quote-comment-text">It captures the relatable journey of seeking happiness
+                                        and the importance of gratitude, showing that cultivating joy is a practice we
+                                        can all embrace.</p>
+                                    <div class="quote-comment-actions">
+                                        <span class="quote-like">Like</span>
+                                        <span class="quote-reply">Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quote-comment">
+                                <img src="assets/images/com-2.jpg" alt="Profile" class="quote-profile-image">
+                                <div class="quote-comment-info">
+                                    <span class="quote-comment-username">Ethan Carter</span>
+                                    <p class="quote-comment-text">This article beautifully highlights the essence of
+                                        happiness, reminding us that it often lies in the simple joys of life, no matter
+                                        our circumstances.</p>
+                                    <div class="quote-comment-actions">
+                                        <span class="quote-like">Like</span>
+                                        <span class="quote-reply">Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional comments can be added here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second post Ends -->
+
+
+                <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <h2>OTHER COLUMN</h2>
+
+                        <div class="carousel-item active">
+                            <div class="box">
+                                <img src="assets/images/oc-1.jpg" alt="Image 1">
+                                <h5>The Timeless Appeal of Vintage Fashion</h5>
+                                <!-- <p>Description for image 1.</p> -->
+                            </div>
+                            <div class="box">
+                                <img src="assets/images/oc-2.jpg" alt="Image 2">
+                                <h5>Why Old Gadgets Are Making a Comeback</h5>
+                                <!-- <p>Description for image 2.</p> -->
+                            </div>
+                            <div class="box">
+                                <img src="assets/images/oc-3.jpg" alt="Image 3">
+                                <h5>Why Craftsmanship Is Making a Comeback</h5>
+                                <!-- <p>Description for image 3.</p> -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+                <!-- Third post start -->
+                <div class="quote-section">
+                    <div class="quote-header">
+                        <img src="assets/images/p3p.jpg" alt="Profile" class="quote-profile-image">
+                        <div class="quote-info">
+                            <span class="quote-username">Tech Guru</span>
+                            <span class="quote-time">1 hour ago</span>
+                        </div>
+                    </div>
+
+                    <div class="quote-content">
+                        <p>
+                            “Technology is best when it brings people together.”
+                        </p>
+                        <img src="assets/images/techpost.jpg" alt="Post Image" class="quote-image">
+                    </div>
+
+                    <div class="quote-actions">
+                        <button class="quote-like-btn"><i class="icon-like"></i> Like</button>
+                        <button class="quote-comment-btn"><i class="icon-comment"></i> Comment</button>
+                        <button class="quote-share-btn">Share</button>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="quote-comments-section">
+                        <div class="quote-comment-input">
+                            <img src="assets/images/postimg.jpg" alt="Profile" class="quote-profile-image">
+                            <input type="text" placeholder="Write a comment..." class="quote-comment-field">
+                        </div>
+
+                        <div class="quote-comments">
+                            <div class="quote-comment">
+                                <img src="assets/images/p3c1.jfif" alt="Profile" class="quote-profile-image">
+                                <div class="quote-comment-info">
+                                    <span class="quote-comment-username">Alice Johnson</span>
+                                    <p class="quote-comment-text">This quote truly captures the essence of how
+                                        technology can enhance our connections.</p>
+                                    <div class="quote-comment-actions">
+                                        <span class="quote-like">Like</span>
+                                        <span class="quote-reply">Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quote-comment">
+                                <img src="assets/images/p3c2.jpg" alt="Profile" class="quote-profile-image">
+                                <div class="quote-comment-info">
+                                    <span class="quote-comment-username">Mark Stevens</span>
+                                    <p class="quote-comment-text">Absolutely! It's amazing how technology can help us
+                                        stay connected, even from afar.</p>
+                                    <div class="quote-comment-actions">
+                                        <span class="quote-like">Like</span>
+                                        <span class="quote-reply">Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Additional comments can be added here -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Third post ends -->
+
+
+                <!-- Fourth post start -->
+<div class="quote-section">
+    <div class="quote-header">
+        <img src="assets/images/p4p.jpg" alt="Profile" class="quote-profile-image">
+        <div class="quote-info">
+            <span class="quote-username">Global Advocate</span>
+            <span class="quote-time">Just now</span>
+        </div>
+    </div>
+
+    <div class="quote-content">
+        <p style="text-align: center;">
+
+            <!-- <strong >World is Celebrating </strong> <br> -->
+            <h2 class="post-heading" style="font-weight: bold; font-style: italic;">Celebrating International<br> Rural Women's Day</h2>
+
+            “Rural women are key agents of change, transforming their communities and economies.”
+        </p>
+        <img src="assets/images/post4.jpg" alt="Post Image" class="quote-image">
+    </div>
+
+    <div class="quote-actions">
+        <button class="quote-like-btn"><i class="icon-like"></i> Like</button>
+        <button class="quote-comment-btn"><i class="icon-comment"></i> Comment</button>
+        <button class="quote-share-btn">Share</button>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="quote-comments-section">
+        <div class="quote-comment-input">
+            <img src="assets/images/postimg.jpg" alt="Profile" class="quote-profile-image">
+            <input type="text" placeholder="Write a comment..." class="quote-comment-field">
+        </div>
+
+        <div class="quote-comments">
+            <div class="quote-comment">
+                <img src="assets/images/p4c1.jpg" alt="Profile" class="quote-profile-image">
+                <div class="quote-comment-info">
+                    <span class="quote-comment-username">Maria Lopez</span>
+                    <p class="quote-comment-text">This is so true! Empowering rural women is crucial for sustainable development.</p>
+                    <div class="quote-comment-actions">
+                        <span class="quote-like">Like</span>
+                        <span class="quote-reply">Reply</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-comment">
+                <img src="assets/images/p4c2.jpg" alt="Profile" class="quote-profile-image">
+                <div class="quote-comment-info">
+                    <span class="quote-comment-username">James Carter</span>
+                    <p class="quote-comment-text">Absolutely agree! Their resilience and strength are inspiring.</p>
+                    <div class="quote-comment-actions">
+                        <span class="quote-like">Like</span>
+                        <span class="quote-reply">Reply</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional comments can be added here -->
+        </div>
+    </div>
+</div>
+<!-- Fourth post ends -->
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <!-- End Quote Section -->
+
+
+            <!-- Additional sections can be added here -->
+        </div>
+
+        <!-- Right Column (Sticky) -->
+        <div class="right-column">
+            <div class="sticky">
+                <h2>TODAY’S COLUMN</h2>
+
+                <!-- First Row -->
+                <div class="row">
+                    <div class="col-30">
+                        <img src="assets/images/totaysColumn1.jpg" alt="Image 1" class="row-image">
+                    </div>
+                    <div class="col-70">
+                        <span class="row-title">Sweet Temptations: The Psychology Behind Cravings</span>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="row">
+                    <div class="col-30">
+                        <img src="assets/images/todayscolumn2.jpg" alt="Image 2" class="row-image">
+                    </div>
+                    <div class="col-70">
+                        <span class="row-title">The Pickup Phenomenon: Why We Crave the Ideal Vehicle</span>
+                    </div>
+                </div>
+
+                <!-- Third Row -->
+                <div class="row">
+                    <div class="col-30">
+                        <img src="assets/images/todayscolumn3.jpg" alt="Image 3" class="row-image">
+                    </div>
+                    <div class="col-70">
+                        <span class="row-title">
+                            Balancing Wants and Needs: Making Smart Choices</span>
+                    </div>
+                </div>
+
+                <!-- Fourth Row -->
+                <div class="row">
+                    <div class="col-30">
+                        <img src="assets/images/todayscolumn4.jpg" alt="Image 4" class="row-image">
+                    </div>
+                    <div class="col-70">
+                        <span class="row-title">Dressed to Express: My Life in T-Shirts</span>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: 30px;">Featured Products</h2>
+
+
+
+                <div class="row">
+                    <div class="col-30">
+                        <img src="./assets/images/pro-1.jpg" alt="Cup Image" class="row-image">
+                    </div>
+                    <div class="col-70">
+                        <span class="row-title">Cup</span>
+                        <p class="row-description">
+                            A stylish, durable cup perfect for your daily coffee or tea.
+                        </p>
+                        <p class="row-price">Price: $12.99</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-30">
+                        <img src="./assets/images/pro-2.jpg" alt="Glass Image" class="row-image">
+                    </div>
+                    <div class="col-70">
+                        <span class="row-title">Glass</span>
+                        <p class="row-description">
+                            Elevate every sip with this elegantly crafted glass.
+                        </p>
+                        <p class="row-price">Price: $9.99</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-30">
+                        <img src="./assets/images/pro-3.jpg" alt="Cap Image" class="row-image">
+                    </div>
+                    <div class="col-70">
+                        <span class="row-title">Cap</span>
+                        <p class="row-description">
+                            A breathable, stylish cap perfect for any weather.
+                        </p>
+                        <p class="row-price">Price: $15.99</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-30">
+                        <img src="./assets/images/pro-4.jpg" alt="Shirt Image" class="row-image">
+                    </div>
+                    <div class="col-70">
+                        <span class="row-title">Shirt</span>
+                        <p class="row-description">
+                            Comfortable and versatile, a must-have shirt for any occasion.
+                        </p>
+                        <p class="row-price">Price: $19.99</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        <!-- End Right Column -->
+
+    </div>
+
+
+    <script src="assets/js/jackScript.js"></script>
+
+</body>
+
+</html>
