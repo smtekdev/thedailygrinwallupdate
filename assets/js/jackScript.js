@@ -64,3 +64,16 @@ function toggleQuoteOptions(element) {
 
 
 /* End Quote Section Script  */
+
+
+
+// smooth for scroll bar
+
+
+document.querySelector('.sticky').addEventListener('wheel', function(e) {
+    e.preventDefault(); // Prevent default scrolling behavior
+    this.scrollBy({
+        top: e.deltaY * 0.2, // Adjust this multiplier for smoother scroll
+        behavior: 'smooth'
+    });
+});
